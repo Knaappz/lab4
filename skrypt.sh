@@ -41,7 +41,7 @@ if [[ "$1" = "--init" ]]; then
 
 fi
 
-if [ "$1" == "" ]; then
+if [ "$1" == "--error" -o "$1" == "-e"  ]; then
   num_files=100
 else
   num_files="$1"
