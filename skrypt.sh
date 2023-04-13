@@ -23,3 +23,13 @@ if [[ $1 == "--logs" ]]; then
 else
   echo "Nieprawidłowa flaga lub brak argumentu liczby plików. Użyj --logs [liczba], aby utworzyć określoną liczbę plików logów lub --logs, aby utworzyć 100 plików."
 fi
+
+if [[ $1 == "--help" ]]; then
+  echo "Dostępne opcje:"
+  echo "-a, --opcja-a    opis opcji a"
+  echo "-b, --opcja-b    opis opcji b"
+  echo "-c, --opcja-c    opis opcji c"
+  echo "-h, --help       wyświetla pomoc"
+else
+  echo "Nieprawidłowe użycie. Aby wyświetlić dostępne opcje, użyj parametru --help"
+fi
