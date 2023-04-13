@@ -38,4 +38,6 @@ if [[ "$1" = "--init" ]]; then
         source ~/.bashrc
 
         echo "Repozytorium sklonowane i ścieżka dodana do PATH"
+
 fi
+
