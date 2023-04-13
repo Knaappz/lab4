@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ "$1" = "--date" ]; then
+if [ "$1" = "--date" -o "$1" == "-d" ]; then
   today=$(date +%Y-%m-%d)
   echo "Dzisiaj jest: $today"
 else
   echo "Użycie: $0 --date"
 fi
 
-if [[ $1 == "--logs" ]]; then
+if [[ $1 == "--logs" -o "$1" == "-l" ]]; then
   if [[ $2 =~ ^[0-9]+$ ]]; then
     num_logs=$2
   else
@@ -24,12 +24,12 @@ else
   echo "Nieprawidłowa flaga lub brak argumentu liczby plików. Użyj --logs [liczba], aby utworzyć określoną liczbę plików logów lub --logs, aby utworzyć 100 plików."
 fi
 
-if [[ $1 == "--help" ]]; then
+if [[ $1 == "--help" -o "$1" == "-h" ]]; then
   echo "Dostępne opcje:"
   echo "-a, --opcja-a    opis opcji a"
   echo "-b, --opcja-b    opis opcji b"
   echo "-c, --opcja-c    opis opcji c"
   echo "-h, --help       wyświetla pomoc"
 else
-  echo "Nieprawidłowe użycie. Aby wyświetlić dostępne opcje, użyj parametru --help"
+  echo "Nieprawidłowe użycie. Aby wyświetlić dostępne opcje, użyj parametru --help lub -h"
 fi
