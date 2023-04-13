@@ -41,3 +41,18 @@ if [[ "$1" = "--init" ]]; then
 
 fi
 
+if [ "$1" == "" ]; then
+  num_files=100
+else
+  num_files="$1"
+fi
+
+mkdir -p errorx
+
+for i in $(seq 1 "$num_files"); do
+  echo "Nazwa pliku: error$i.txt" > errorx/error$i.txt
+  echo "Nazwa skryptu: $0" >> errorx/error$i.txt
+  echo "Data utworzenia: $(date)" >> errorx/error$i.txt
+done
+
+
